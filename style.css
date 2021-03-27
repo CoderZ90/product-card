@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #19172e;
+    position: relative;
+}
+
+.wrapper::after {
+    position: absolute;
+    content: '';
+    top: 10%;
+    right: 20%;
+    background: linear-gradient(45deg,#0026ff, #00ff80);
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    animation: floating 5s ease-in-out infinite;
+}
+
+.wrapper::before {
+    position: absolute;
+    content: '';
+    bottom: 10%;
+    left: 20%;
+    background: linear-gradient(#ffa600,#ff0000);
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    animation: floating 5s ease-in-out infinite;
+    animation-delay: -2.5s;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    min-height: 440px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+    overflow: hidden;
+    z-index: 1000;
+    padding: 40px 40px 60px;
+}
+
+.card .imgBox {
+    text-align: center;
+}
+
+.card .imgBox img {
+    width: 60%;
+}
+
+.card .box {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card .box .title {
+    color: #fff;
+    margin-top: 20px;
+}
+
+.card .box .title h2 {
+    font-weight: 400;
+}
+
+.card .box .content {
+    margin-top: 30px;
+}
+
+.card .box .content p {
+    color: #fff;
+}
+
+.card .btn {
+    margin-top: 30px;
+}
+
+.card button {
+    width: 90%;
+    height: 54px;
+    background: linear-gradient(45deg, #0026ff, #00ff80);
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Product Sans';
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: linear-gradient(45deg, #00ff80, #0026ff);
+}
+
+.header {
+    position: absolute;
+    background: linear-gradient(#0026ff, #00ff80);
+    width: 600%;
+    height: 50%;
+    top: -110%;
+    left: -120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
